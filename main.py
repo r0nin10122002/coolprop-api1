@@ -1,6 +1,13 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from CoolProp.CoolProp import PropsSI
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"message": "CoolProp API is running!"}
 
 app = FastAPI()
 
